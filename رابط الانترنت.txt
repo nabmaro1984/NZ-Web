@@ -1,0 +1,68 @@
+https://nz-limalam.vercel.app
+
+
+
+
+
+
+
+
+
+
+3 روابط مهمة:
+
+رابط الإنتاج (الأهم):
+https://nz-limalam.vercel.app
+رابط مباشر للنسخة الحالية:
+https://nz-limalam-cceytrq8b-nz-os.vercel.app
+لوحة التحكم (للمراجعة والأخطاء):
+https://vercel.com/nz-os/nz-limalam/A6qmJZWQUQ78yshsCAn1PZUJtfB1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+أي تعديل جديد على الكود → فقط نفّذ:
+
+bash
+git add .
+git commit -m "update"
+git push
+Vercel
+
+سيعيد النشر تلقائيًا ويحدّث الموقع بدون أي تدخل إضافي منك.
+
+
+
+
+
+
+
+
+git add .
+git commit -m "update"
+git push
+
+
+
+
+
+
+
+
+
+
