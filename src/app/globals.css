@@ -15,6 +15,12 @@
   --nz-green: #10b981;
   --nz-text: #f1f5f9;
   --nz-muted: #94a3b8;
+
+  --morroco-terracotta: #C85346;
+  --morroco-emerald: #2A9D8F;
+  --morroco-gold: #E9C46A;
+  --morroco-sapphire: #264653;
+  --morroco-tile: #D4A547;
 }
 
 @layer base {
@@ -31,6 +37,19 @@
     color: var(--nz-text);
     font-family: 'Cairo', sans-serif;
     direction: rtl;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url('/images/zellij-pattern.svg');
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
   }
 
   body.english {
@@ -38,7 +57,7 @@
   }
 
   ::selection {
-    background-color: rgba(8, 145, 178, 0.3);
+    background-color: rgba(139, 92, 246, 0.3);
     color: #f1f5f9;
   }
 
@@ -56,7 +75,7 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #0891b2;
+    background: #8b5cf6;
   }
 }
 
@@ -65,6 +84,19 @@
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 40%, rgba(139, 92, 246, 0.03) 0%, transparent 60%);
+    pointer-events: none;
   }
 
   .glass-hover {
@@ -73,7 +105,7 @@
 
   .glass-hover:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(8, 145, 178, 0.3);
+    border-color: rgba(139, 92, 246, 0.3);
   }
 
   .glow-teal {
@@ -94,6 +126,11 @@
   .glow-green {
     box-shadow: 0 0 20px rgba(16, 185, 129, 0.3),
                 0 0 40px rgba(16, 185, 129, 0.1);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3),
+                0 0 40px rgba(139, 92, 246, 0.1);
   }
 
   .gradient-text {
@@ -139,4 +176,177 @@
   .preserve-3d {
     transform-style: preserve-3d;
   }
+
+  /* ====== Moroccan Zellij Decorative Elements ====== */
+
+  .zellij-section-divider {
+    position: relative;
+    height: 24px;
+    margin: 0 auto;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .zellij-section-divider::before,
+  .zellij-section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.2), transparent);
+  }
+
+  .zellij-diamond {
+    width: 12px;
+    height: 12px;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    transform: rotate(45deg);
+    animation: mosaicShimmer 4s ease-in-out infinite;
+  }
+
+  .zellij-corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(139, 92, 246, 0.08);
+    opacity: 0.4;
+  }
+
+  .zellij-corner-tl {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 4px 0 0 0;
+  }
+
+  .zellij-corner-tr {
+    top: -1px;
+    right: -1px;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0 4px 0 0;
+  }
+
+  .zellij-corner-bl {
+    bottom: -1px;
+    left: -1px;
+    border-right: none;
+    border-top: none;
+    border-radius: 0 0 0 4px;
+  }
+
+  .zellij-corner-br {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
+    border-radius: 0 0 4px 0;
+  }
+
+  .zellij-star-bg {
+    position: relative;
+  }
+
+  .zellij-star-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/zellij-star.svg');
+    background-size: 120px 120px;
+    background-repeat: repeat;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .zellij-arch {
+    position: relative;
+    overflow: visible;
+  }
+
+  .zellij-arch::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 20px;
+    border: 1px solid rgba(139, 92, 246, 0.08);
+    border-bottom: none;
+    border-radius: 60px 60px 0 0;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .zellij-arch::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 20px;
+    border: 1px solid rgba(139, 92, 246, 0.08);
+    border-top: none;
+    border-radius: 0 0 60px 60px;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .zellij-tile-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
+    max-width: 120px;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .zellij-tile {
+    aspect-ratio: 1;
+    border-radius: 1px;
+  }
+
+  .zellij-tile-1 { background: #C85346; }
+  .zellij-tile-2 { background: #2A9D8F; }
+  .zellij-tile-3 { background: #264653; }
+  .zellij-tile-4 { background: #E9C46A; }
+  .zellij-tile-5 { background: #8B5CF6; }
+  .zellij-tile-6 { background: #22D3EE; }
+
+  .zellij-border-top {
+    position: relative;
+  }
+
+  .zellij-border-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-image: url('/images/zellij-border.svg');
+    background-repeat: repeat-x;
+    background-size: 400px 20px;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .zellij-glow-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin: 0 4px;
+    background: rgba(139, 92, 246, 0.2);
+    animation: mosaicShimmer 3s ease-in-out infinite;
+  }
+
+  .zellij-glow-dot:nth-child(2) { animation-delay: 0.5s; background: rgba(34, 211, 238, 0.2); }
+  .zellij-glow-dot:nth-child(3) { animation-delay: 1s; background: rgba(245, 158, 11, 0.2); }
+  .zellij-glow-dot:nth-child(4) { animation-delay: 1.5s; background: rgba(139, 92, 246, 0.2); }
 }

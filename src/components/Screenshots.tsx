@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import Section from "./ui/Section";
@@ -35,10 +35,13 @@ export default function Screenshots({ t }: ScreenshotsProps) {
             onClick={() => setSelectedIdx(i % items.length)}
           >
             <div className="w-72 md:w-80 glass rounded-2xl p-2 overflow-hidden">
-              <div className="aspect-video bg-[#1a2235] rounded-xl flex items-center justify-center">
-                <div className="text-5xl opacity-20 group-hover:opacity-40 transition-opacity">
-                  🖥️
-                </div>
+              <div className="aspect-video bg-[#1a2235] rounded-xl overflow-hidden flex items-center justify-center">
+                <img
+                  src={item.path}
+                  alt={item.label}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
               <div className="p-3 text-center">
                 <span className="text-[#94a3b8] text-sm">{item.label}</span>
@@ -48,7 +51,7 @@ export default function Screenshots({ t }: ScreenshotsProps) {
         ))}
       </Marquee>
 
-      {/* Static grid fallback */}
+      {/* Static grid */}
       <div className="grid md:grid-cols-3 gap-4 mt-8 max-w-4xl mx-auto">
         {items.slice(0, 3).map((item: any, i: number) => (
           <motion.button
@@ -61,10 +64,13 @@ export default function Screenshots({ t }: ScreenshotsProps) {
             whileHover={{ scale: 1.02 }}
             onClick={() => setSelectedIdx(i)}
           >
-            <div className="aspect-video bg-[#1a2235] rounded-xl flex items-center justify-center">
-              <div className="text-5xl opacity-20 group-hover:opacity-40 transition-opacity">
-                🖥️
-              </div>
+            <div className="aspect-video bg-[#1a2235] rounded-xl overflow-hidden flex items-center justify-center">
+              <img
+                src={item.path}
+                alt={item.label}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
             <div className="p-3 text-center">
               <span className="text-[#94a3b8] text-sm">{item.label}</span>
@@ -87,11 +93,15 @@ export default function Screenshots({ t }: ScreenshotsProps) {
               initial={{ scale: 0.85, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.85, opacity: 0 }}
-              className="relative max-w-4xl w-full"
+              className="relative max-w-5xl w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="aspect-video bg-[#1a2235] rounded-2xl border border-white/10 flex items-center justify-center">
-                <div className="text-8xl opacity-20">🖥️</div>
+              <div className="aspect-video bg-[#1a2235] rounded-2xl border border-white/10 overflow-hidden">
+                <img
+                  src={items[selectedIdx].path}
+                  alt={items[selectedIdx].label}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="flex items-center justify-between mt-4">
                 <span className="text-[#f1f5f9] text-lg font-semibold">

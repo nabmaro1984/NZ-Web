@@ -1,0 +1,8 @@
+{
+  "name": "nz84-erp-os",
+  "version": "2.0.15",
+  "description": "NZ-OS PRO v2 — Enterprise Production System",
+  "main": "main.js",
+  "author": "NZ-OS PRO",
+  "license": "COMMERCIAL"
+}

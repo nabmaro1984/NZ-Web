@@ -15,12 +15,13 @@ const accentGradients: Record<string, string> = {
   amber: "from-[#f59e0b] to-[#fbbf24]",
   green: "from-[#10b981] to-[#34d399]",
   red: "from-[#ef4444] to-[#f87171]",
+  cyan: "from-[#22d3ee] to-[#67e8f9]",
 };
 
 export default function Features({ t }: FeaturesProps) {
   return (
     <Section id="features" title={t.features.title} subtitle={t.features.subtitle} gradient>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
         {t.features.items.map((item: any, i: number) => (
           <motion.div
             key={i}

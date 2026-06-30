@@ -72,7 +72,7 @@ export default function Contact({ t }: ContactProps) {
   ];
 
   return (
-    <Section id="contact" title={t.contact.title} subtitle={t.contact.subtitle}>
+    <Section id="contact" title={t.contact.title} subtitle={t.contact.subtitle} className="zellij-arch">
       <div className="grid lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
         {/* Left — Info cards (2 cols) */}
         <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">

@@ -18,6 +18,7 @@ const navItems = (t: any) => [
   { label: t.nav.testimonials, href: "#testimonials" },
   { label: t.nav.faq, href: "#faq" },
   { label: t.nav.contact, href: "#contact" },
+  { label: t.nav.simulator || "🧪 جرب النظام", href: "/simulator" },
 ];
 
 export default function Navbar({ lang, onToggleLang, t }: NavbarProps) {

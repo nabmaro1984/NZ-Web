@@ -7,7 +7,20 @@ interface FooterProps {
 
 export default function Footer({ t, lang }: FooterProps) {
   return (
-    <footer className="relative border-t border-white/[0.06]" style={{ background: "#060a14" }}>
+    <footer className="relative border-t border-white/[0.06] zellij-border-top" style={{ background: "#060a14" }}>
+      {/* Moroccan decorative corners */}
+      <div className="zellij-corner zellij-corner-tl" />
+      <div className="zellij-corner zellij-corner-tr" />
+      <div className="zellij-corner zellij-corner-bl" />
+      <div className="zellij-corner zellij-corner-br" />
+
+      {/* Subtle zellij tile grid in background */}
+      <div className="absolute left-8 top-16 zellij-tile-grid opacity-[0.04] hidden md:grid">
+        {[1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6].map((c, i) => (
+          <div key={i} className={`zellij-tile zellij-tile-${c}`} />
+        ))}
+      </div>
+
       <div className="container mx-auto px-4 py-16">
         {/* Row 1 — Logo + tagline + social */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-12">
@@ -95,6 +108,13 @@ export default function Footer({ t, lang }: FooterProps) {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Row 2.5 — Zellij divider */}
+        <div className="zellij-section-divider mb-8">
+          <span className="zellij-diamond" />
+          <span className="zellij-diamond" style={{ animationDelay: '0.8s' }} />
+          <span className="zellij-diamond" style={{ animationDelay: '1.6s' }} />
         </div>
 
         {/* Row 3 — Copyright */}

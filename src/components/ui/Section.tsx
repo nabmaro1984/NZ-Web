@@ -61,7 +61,13 @@ export default function Section({
                 {title}
               </motion.h2>
             )}
-            <div className="w-24 h-1 bg-glow-gradient rounded-full mx-auto mt-6" />
+            <div className="flex items-center justify-center gap-3 mt-6">
+              <span className="zellij-diamond" />
+              <span className="zellij-diamond" style={{ animationDelay: '0.8s' }} />
+              <div className="w-16 h-0.5 bg-glow-gradient rounded-full" />
+              <span className="zellij-diamond" style={{ animationDelay: '1.6s' }} />
+              <span className="zellij-diamond" />
+            </div>
           </div>
         )}
         {children}

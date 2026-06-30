@@ -12,7 +12,7 @@ export default function Hero({ t }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden zellij-star-bg"
       style={{ background: "#0a0f1e" }}
     >
       {/* Particles */}
@@ -77,7 +77,7 @@ export default function Hero({ t }: HeroProps) {
 
           {/* Stats */}
           <motion.div
-            className="flex flex-wrap justify-center gap-8 md:gap-16 mb-10"
+            className="flex flex-wrap justify-center gap-6 md:gap-12 mb-10"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -91,6 +91,18 @@ export default function Hero({ t }: HeroProps) {
             ))}
           </motion.div>
 
+          {/* Moroccan zellij divider */}
+          <motion.div
+            className="zellij-section-divider mb-8"
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+          >
+            <span className="zellij-diamond" />
+            <span className="zellij-diamond" style={{ animationDelay: '1s' }} />
+            <span className="zellij-diamond" style={{ animationDelay: '2s' }} />
+          </motion.div>
+
           {/* CTA Buttons */}
           <motion.div
             className="flex flex-wrap justify-center gap-4"
@@ -100,7 +112,7 @@ export default function Hero({ t }: HeroProps) {
           >
             <motion.a
               href="#contact"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-[#f59e0b] to-[#f97316] text-white font-bold rounded-2xl shadow-lg shadow-[#f59e0b]/30 hover:shadow-[#f59e0b]/50 transition-all duration-300 text-lg"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-[#8b5cf6] to-[#22d3ee] text-white font-bold rounded-2xl shadow-lg shadow-[#8b5cf6]/30 hover:shadow-[#8b5cf6]/50 transition-all duration-300 text-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

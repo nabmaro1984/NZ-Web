@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 interface GlassCardProps {
   children: React.ReactNode;
   className?: string;
-  glow?: "cyan" | "purple" | "green" | "none";
+  glow?: "cyan" | "purple" | "green" | "amber" | "none";
   hover?: boolean;
   onClick?: () => void;
 }
@@ -25,6 +25,7 @@ export default function GlassCard({
         glow === "cyan" && "hover:glow-cyan",
         glow === "purple" && "hover:glow-purple",
         glow === "green" && "hover:glow-green",
+        glow === "amber" && "hover:glow-amber",
         hover && "glass-hover",
         className
       )}

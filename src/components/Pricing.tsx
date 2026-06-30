@@ -31,11 +31,17 @@ export default function Pricing({ t }: PricingProps) {
       popular: false,
       color: "purple",
     },
+    {
+      key: "pro",
+      ...t.pricing.pro,
+      popular: false,
+      color: "amber",
+    },
   ];
 
   return (
     <Section id="pricing" title={t.pricing.title} subtitle={t.pricing.subtitle}>
-      <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {plans.map((plan, i) => (
           <motion.div
             key={plan.key}
@@ -46,26 +52,29 @@ export default function Pricing({ t }: PricingProps) {
             className="relative"
           >
             {/* Badge */}
-            {(plan.popular || plan.key === "yearly") && (
+            {(plan.popular || plan.key === "yearly" || plan.key === "pro") && (
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
                 <span
                   className={cn(
                     "px-4 py-1.5 text-white text-sm font-semibold rounded-full",
                     plan.popular
                       ? "bg-gradient-to-r from-[#0891b2] to-[#22d3ee] shadow-lg shadow-[#0891b2]/30"
-                      : "bg-gradient-to-r from-[#10b981] to-[#34d399] shadow-lg shadow-[#10b981]/30"
+                      : plan.key === "yearly"
+                      ? "bg-gradient-to-r from-[#10b981] to-[#34d399] shadow-lg shadow-[#10b981]/30"
+                      : "bg-gradient-to-r from-[#f59e0b] to-[#f97316] shadow-lg shadow-[#f59e0b]/30"
                   )}
                 >
-                  {plan.key === "yearly" ? t.pricing.saveBadge : t.pricing.popular}
+                  {plan.key === "yearly" ? t.pricing.saveBadge : plan.key === "pro" ? t.pricing.pro.badge : t.pricing.popular}
                 </span>
               </div>
             )}
 
             <GlassCard
-              glow={plan.popular ? "cyan" : plan.key === "yearly" ? "green" : "none"}
+              glow={plan.popular ? "cyan" : plan.key === "yearly" ? "green" : plan.key === "pro" ? "amber" : "none"}
               className={cn(
                 "h-full flex flex-col",
-                plan.popular && "border-[#0891b2]/30"
+                plan.popular && "border-[#0891b2]/30",
+                plan.key === "pro" && "border-[#f59e0b]/30"
               )}
             >
               {/* Plan name & price */}

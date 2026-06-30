@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="20" viewBox="0 0 400 20">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(139,92,246,0)"/>
+      <stop offset="20%" stop-color="rgba(139,92,246,0.15)"/>
+      <stop offset="40%" stop-color="rgba(34,211,238,0.15)"/>
+      <stop offset="60%" stop-color="rgba(245,158,11,0.15)"/>
+      <stop offset="80%" stop-color="rgba(139,92,246,0.15)"/>
+      <stop offset="100%" stop-color="rgba(139,92,246,0)"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="8" width="400" height="1" fill="url(#g1)" opacity="0.5"/>
+  <polygon points="20,10 25,5 30,10 25,15" fill="rgba(139,92,246,0.1)"/>
+  <polygon points="80,10 85,5 90,10 85,15" fill="rgba(34,211,238,0.08)"/>
+  <polygon points="150,10 155,5 160,10 155,15" fill="rgba(245,158,11,0.08)"/>
+  <polygon points="220,10 225,5 230,10 225,15" fill="rgba(139,92,246,0.1)"/>
+  <polygon points="300,10 305,5 310,10 305,15" fill="rgba(34,211,238,0.08)"/>
+  <polygon points="370,10 375,5 380,10 375,15" fill="rgba(245,158,11,0.08)"/>
+</svg>
