@@ -218,10 +218,10 @@ export default function SimulatorPage() {
   const renderCustomers = () => (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
       {[
-        { name: "محمد علي", phone: "+218 91 234 5678", total: "12,450", visits: 45 },
-        { name: "أحمد سالم", phone: "+218 92 345 6789", total: "8,200", visits: 32 },
-        { name: "خالد عمر", phone: "+218 93 456 7890", total: "5,600", visits: 18 },
-        { name: "فاطمة الزهراء", phone: "+218 94 567 8901", total: "3,400", visits: 12 },
+        { name: "محمد علي", phone: "xxxxxxxxxxxx", total: "12,450", visits: 45 },
+        { name: "أحمد سالم", phone: "xxxxxxxxxxxx", total: "8,200", visits: 32 },
+        { name: "خالد عمر", phone: "xxxxxxxxxxxx", total: "5,600", visits: 18 },
+        { name: "فاطمة الزهراء", phone: "xxxxxxxxxxxx", total: "3,400", visits: 12 },
       ].map((c, i) => (
         <div key={i} className="bg-[#151848] border border-[rgba(139,92,246,0.15)] rounded-2xl p-4">
           <div className="flex items-center gap-3 mb-2">
