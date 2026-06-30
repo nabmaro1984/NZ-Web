@@ -101,7 +101,7 @@ export default function SimulatorPage() {
               className="group relative bg-[#151848] border border-[rgba(139,92,246,0.15)] rounded-xl p-3 text-right hover:border-[#8b5cf6] transition-all hover:shadow-lg hover:shadow-[#8b5cf6]/10"
             >
               <div className="text-xs text-[#64748B] mb-1 truncate">{p.name}</div>
-              <div className="text-sm font-bold text-[#00D4FF]">{p.price.toFixed(2)} د.ل</div>
+              <div className="text-sm font-bold text-[#00D4FF]">{p.price.toFixed(2)}</div>
               <div className="text-[10px] text-[#64748B] mt-1">متبقي: {p.stock}</div>
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#8b5cf6]/0 to-[#00D4FF]/0 group-hover:from-[#8b5cf6]/5 group-hover:to-[#00D4FF]/5 transition-all pointer-events-none" />
             </motion.button>
@@ -135,7 +135,7 @@ export default function SimulatorPage() {
         <div className="pt-2 border-t border-white/5">
           <div className="flex justify-between items-center mb-3">
             <span className="text-xs text-[#64748B]">الإجمالي</span>
-            <span className="text-lg font-bold text-[#10B981]">{total.toFixed(2)} د.ل</span>
+            <span className="text-lg font-bold text-[#10B981]">{total.toFixed(2)}</span>
           </div>
           <button className="w-full py-2.5 rounded-xl bg-gradient-to-l from-[#8b5cf6] to-[#00D4FF] text-white text-sm font-bold hover:opacity-90 transition-opacity">
             إتمام البيع ({cart.length})
@@ -165,10 +165,10 @@ export default function SimulatorPage() {
       <div className="bg-[#151848] border border-[rgba(139,92,246,0.15)] rounded-2xl p-4">
         <div className="text-xs text-[#64748B] mb-4">آخر المعاملات</div>
         {[
-          { customer: "محمد علي", amount: "230 د.ل", status: "مكتمل" },
-          { customer: "أحمد سالم", amount: "85 د.ل", status: "مكتمل" },
-          { customer: "خالد عمر", amount: "450 د.ل", status: "معلق" },
-          { customer: "فاطمة الزهراء", amount: "120 د.ل", status: "مكتمل" },
+          { customer: "محمد علي", amount: "230", status: "مكتمل" },
+          { customer: "أحمد سالم", amount: "85", status: "مكتمل" },
+          { customer: "خالد عمر", amount: "450", status: "معلق" },
+          { customer: "فاطمة الزهراء", amount: "120", status: "مكتمل" },
         ].map((tx, i) => (
           <div key={i} className="flex items-center justify-between py-2.5 border-b border-white/5 last:border-0">
             <span className="text-sm text-[#EEF0FF]">{tx.customer}</span>
@@ -234,7 +234,7 @@ export default function SimulatorPage() {
             </div>
           </div>
           <div className="flex gap-4 text-xs text-[#64748B]">
-            <span>إجمالي المشتريات: <span className="text-[#00D4FF] font-semibold">{c.total} د.ل</span></span>
+            <span>إجمالي المشتريات: <span className="text-[#00D4FF] font-semibold">{c.total}</span></span>
             <span>زيارات: {c.visits}</span>
           </div>
         </div>
