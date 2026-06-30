@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | NZ-لمعلم",
   },
   description:
-    "نظام متكامل للمبيعات والمخزون والعملاء والتقارير مصمم خصيصاً للسوق الليبي والعربي. برنامج نقاط بيع، إدارة مخزون، محاسبة، ERP مع دعم الباركود والميزان.",
+    "نظام متكامل للمبيعات والمخزون والعملاء والتقارير يدعم 5 لغات. برنامج نقاط بيع، إدارة مخزون، محاسبة، ERP مع دعم الباركود والميزان.",
   keywords: [
     "برنامج مبيعات",
     "برنامج مخزون",
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     "برنامج سوبر ماركت",
     "برنامج محاسبة",
     "برنامج ERP",
-    "POS Libya",
-    "ERP Libya",
+    "POS System",
+    "ERP System",
     "Inventory Management",
     "Retail POS System",
     "نظام إدارة متكامل",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "NZ-لمعلم",
     title: "NZ-لمعلم | نظام إدارة متكامل للمبيعات والمخزون",
     description:
-      "نظام متكامل للمبيعات والمخزون والعملاء والتقارير مصمم خصيصاً للسوق الليبي والعربي",
+      "نظام متكامل للمبيعات والمخزون والعملاء والتقارير — يدعم 5 لغات كاملة",
     url: "https://nz-limalam.com",
     images: [
       {
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     creator: "@nz_limalam",
     title: "NZ-لمعلم | نظام إدارة متكامل",
     description:
-      "نظام متكامل للمبيعات والمخزون والعملاء والتقارير مصمم خصيصاً للسوق الليبي والعربي",
+      "نظام متكامل للمبيعات والمخزون والعملاء والتقارير — يدعم 5 لغات كاملة",
     images: ["/images/og-image.png"],
   },
   robots: {
@@ -96,11 +96,11 @@ export default function RootLayout({
     applicationCategory: "BusinessApplication",
     operatingSystem: "Windows, Android",
     description:
-      "نظام متكامل للمبيعات والمخزون والعملاء والتقارير مصمم خصيصاً للسوق الليبي والعربي",
+      "نظام متكامل للمبيعات والمخزون والعملاء والتقارير — يدعم 5 لغات كاملة",
     offers: {
       "@type": "Offer",
       price: "49",
-      priceCurrency: "LYD",
+      priceCurrency: "USD",
       priceValidUntil: "2027-12-31",
       availability: "https://schema.org/InStock",
     },

@@ -15,7 +15,7 @@ export const ar = {
     badge: "✨ الإصدار v2.0.15 — Guardian Edition",
     title: "منظومة إدارة الأعمال\nالأذكى والأكثر أماناً",
     subtitle:
-      "NZ-لمعلم — الجيل الرابع من أنظمة ERP: نواة حماية Guardian، خريطة الاتساق، استرداد ذري، وواجهات متعددة. صُمِّم خصيصاً للسوق الليبي والمغربي والعربي",
+      "NZ-لمعلم — الجيل الرابع من أنظمة ERP: نواة حماية Guardian، خريطة الاتساق، استرداد ذري، وواجهات متعددة. منظومة عالمية تدعم 5 لغات كاملة",
     stats: {
       clients: "+500 عميل راضٍ",
       uptime: "99.9% وقت تشغيل",
@@ -293,7 +293,7 @@ export const ar = {
   },
   footer: {
     tagline:
-      "الجيل الرابع من أنظمة ERP — نواة Guardian، خريطة الاتساق، استرداد ذري. مصمم للسوق الليبي والمغربي والعربي",
+      "الجيل الرابع من أنظمة ERP — نواة Guardian، خريطة الاتساق، استرداد ذري. منظومة عالمية متعددة اللغات",
     quickLinks: "روابط سريعة",
     features: "المميزات",
     support: "الدعم",
@@ -321,7 +321,7 @@ export const en: typeof ar = {
     badge: "✨ Version v2.0.15 — Guardian Edition",
     title: "The Smartest & Most Secure\nBusiness Management System",
     subtitle:
-      "NZ-لمعلم — 4th-gen ERP: Guardian Engine, Consistency Map, Atomic Recovery, 7 UI themes. Designed for Libyan, Moroccan, and Arab markets",
+      "NZ-لمعلم — 4th-gen ERP: Guardian Engine, Consistency Map, Atomic Recovery, 7 UI themes. Global-ready with 5 full languages",
     stats: {
       clients: "+500 Happy Clients",
       uptime: "99.9% Uptime",
@@ -575,7 +575,7 @@ export const en: typeof ar = {
   },
   footer: {
     tagline:
-      "4th-gen ERP — Guardian Engine, Consistency Map, Atomic Recovery. Built for Libyan, Moroccan, and Arab markets",
+      "4th-gen ERP — Guardian Engine, Consistency Map, Atomic Recovery. Multi-language global platform",
     quickLinks: "Quick Links",
     features: "Features",
     support: "Support",
